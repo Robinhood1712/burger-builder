@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 
 import Person from './Persons/Persons';
-
+import styles from './App.css'
 
 
 class App extends Component {
@@ -96,7 +95,7 @@ class App extends Component {
 
 
     return (
-      <div className="App">
+      <div className={styles.App}>
         <h1>Hi, I'm a React App</h1>
         <p className={classes.join(' ')}>This is really working!</p>
         <button
