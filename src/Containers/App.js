@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-import Person from './Persons/Persons';
-import styles from './App.css'
+import Person from './Components/persons/person/person';
+import styles from './App.css';
+import Persons from '../Components/Persons/Persons';
 
-import ErrorBoundary from './ErrorBoundary';
+// import ErrorBoundary from '../ErrorBoundary';
 
 
 class App extends Component {
@@ -69,18 +70,12 @@ class App extends Component {
 
     if ( this.state.showPersons ) {
       persons = (
-        <div>
-          {this.state.persons.map((person, index) => {
-            return <ErrorBoundary key={person.id}>
-             <Person 
-              name={person.name}  
-              age={person.age}
-              click={this.deletePersonHandler.bind(this, index)}
-              changed = {(event) => this.nameChangedHandler(event, person.id)} />
-              </ErrorBoundary>
-          })}
-        </div>
-      );
+                <Persons
+                  persons = {this.state.persons}
+                  changed = {this.nameChangedHandler}
+                  clicked = {this.deletePersonHandler}
+              /> 
+      )
 
       btnClasses = [styles.red, styles.button].join(' ')
     }
