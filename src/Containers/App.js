@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import Person from './Components/persons/person/person';
+// import Person from './Components/persons/person/person';
 import styles from './App.css';
-import Persons from '../Components/Persons/Persons';
-
+import Persons from '../comps/Persons/Persons';
 // import ErrorBoundary from '../ErrorBoundary';
 
 
@@ -70,11 +69,14 @@ class App extends Component {
 
     if ( this.state.showPersons ) {
       persons = (
-                <Persons
+        <div>
+           <Persons
                   persons = {this.state.persons}
                   changed = {this.nameChangedHandler}
                   clicked = {this.deletePersonHandler}
               /> 
+        </div>
+               
       )
 
       btnClasses = [styles.red, styles.button].join(' ')
