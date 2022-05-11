@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import Person from './Components/persons/person/person';
 import styles from './App.css';
 import Persons from '../comps/Persons/Persons';
-import Cockpit from '../comps/Cockpit.js'
+import Cockpit from '../comps/Cockpit.js/Cockpit'
 // import ErrorBoundary from '../ErrorBoundary';
 
 
