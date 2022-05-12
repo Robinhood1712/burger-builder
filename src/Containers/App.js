@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import styles from './App.css';
 import Persons from '../comps/Persons/Persons';
 import Cockpit from '../comps/Cockpit.js/Cockpit'
+import Auxi from '../hoc/auxi';
 // import ErrorBoundary from '../ErrorBoundary';
 
 
@@ -82,16 +83,18 @@ class App extends Component {
 
 
 
-
-
     return (
+      <Auxi>
       <div className={styles.App}>
         <Cockpit 
+          title = {this.props.appTitle}
           persons={this.state.persons}
           showPersons= {this.state.showPersons} 
           clicked= {this.togglePersonsHandler}/>
         {persons}
       </div>
+      </Auxi>
+
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
