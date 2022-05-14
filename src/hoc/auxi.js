@@ -1,8 +1,7 @@
-import React from "react";
 
-const auxi = props => props.children; 
+const auxilliary = props => props.children; 
 
-export default auxi;
+export default auxilliary;
 
 
 
