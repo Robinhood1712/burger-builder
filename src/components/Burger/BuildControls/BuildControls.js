@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../BuildControls/BuildControls.css";
 
 import BuildControl from "./BuildControl/BuildControl";
+import Auxilliary from "../../../hoc/auxi";
 
 const controls = [
     {label: 'Meat', type: 'meat'},
@@ -14,6 +15,10 @@ const controls = [
 
 const buildControls = (props) => {
     return (
+
+        <Auxilliary>
+
+        <div>totalPrice : {props.price}</div>
         <div className={styles.BuildControls}>
             {controls.map(ctrl => {
                 return <BuildControl 
@@ -24,6 +29,9 @@ const buildControls = (props) => {
                     disabled = {props.disabled[ctrl.type]} />
             })}
         </div>
+
+        </Auxilliary>        
+
     )
 }
 
