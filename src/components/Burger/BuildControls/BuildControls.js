@@ -18,8 +18,8 @@ const buildControls = (props) => {
 
         <Auxilliary>
 
-        <div>totalPrice : {props.price}</div>
         <div className={styles.BuildControls}>
+            <p> current price: <strong> {props.price} </strong> </p>
             {controls.map(ctrl => {
                 return <BuildControl 
                     key= {ctrl.label} 
@@ -28,6 +28,7 @@ const buildControls = (props) => {
                     removed = {() => props.ingredientRemoved(ctrl.type)}
                     disabled = {props.disabled[ctrl.type]} />
             })}
+            <button className={styles.OrderButton}>ORDER NOW!</button>
         </div>
 
         </Auxilliary>        
