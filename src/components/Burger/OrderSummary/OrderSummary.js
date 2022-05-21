@@ -31,8 +31,6 @@ const orderSummary = (props) => {
                 Continue ?
             </Button>
 
-
-
         </Auxilliary>
 
     )
