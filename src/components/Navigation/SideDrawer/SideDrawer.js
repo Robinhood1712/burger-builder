@@ -13,7 +13,6 @@ const sideDrawer = () => {
             <nav>
                 <NavigationItems />
             </nav>
-
         </div>
     )
 }
