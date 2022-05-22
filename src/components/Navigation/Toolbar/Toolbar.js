@@ -4,18 +4,18 @@ import styles from "../Toolbar/Toolbar.css";
 
 import Logo from "../../Logo/Logo";
 
+import NavigationItems from "../NavigationItems/NavigationItems";
+
 
 const toolbar = () => {
     return (
-        
+
         <header className={styles.Toolbar}>
             <div>menu</div>
             <Logo />
-            <nav>
-                ...
-            </nav>
-        </header>
-        
+            <NavigationItems />
+        </header>    
+          
     )
 }
 
