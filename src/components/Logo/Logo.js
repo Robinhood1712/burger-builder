@@ -9,7 +9,7 @@ import styles from "../Logo/Logo.css";
 const logo = (props) => {
     return (
         <div className={styles.Logo}>
-            <img src={BurgerLogo} />
+            <img src={BurgerLogo} alt = 'burger-logo'/>
         </div>
     )
 }
