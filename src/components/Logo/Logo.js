@@ -8,8 +8,8 @@ import styles from "../Logo/Logo.css";
 
 const logo = (props) => {
     return (
-        <div className={styles.Logo}>
-            <img src={BurgerLogo} alt = 'burger-logo'/>
+        <div className={styles.Logo} style= {{height : props.height}}>
+            <img src={BurgerLogo} alt = 'MyBurger'/>
         </div>
     )
 }

@@ -9,7 +9,7 @@ const orderSummary = (props) => {
     const ingredientsSummary = Object.keys(props.ingredients)
         .map(igkey => {
             return (
-                <li>
+                <li key={igkey}>
                     {igkey} : {props.ingredients[igkey]}
                 </li> );
     });

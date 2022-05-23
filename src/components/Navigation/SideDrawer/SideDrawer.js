@@ -9,7 +9,7 @@ import styles from "../SideDrawer/SideDrawer.css";
 const sideDrawer = () => {
     return (
         <div className={styles.SideDrawer}>
-            <Logo />
+            <Logo height = '10%'/>
             <nav>
                 <NavigationItems />
             </nav>

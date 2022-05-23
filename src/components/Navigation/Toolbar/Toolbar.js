@@ -12,7 +12,7 @@ const toolbar = () => {
 
         <header className={styles.Toolbar}>
             <div>menu</div>
-            <Logo />
+            <Logo  height = '80%'/>
             <NavigationItems />
         </header>    
           
