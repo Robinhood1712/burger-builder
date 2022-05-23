@@ -6,12 +6,14 @@ import Logo from "../../Logo/Logo";
 
 import NavigationItems from "../NavigationItems/NavigationItems";
 
+import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 
-const toolbar = () => {
+
+const toolbar = (props) => {
     return (
 
         <header className={styles.Toolbar}>
-            <div onClick={props.clicked}>menu</div>
+            <DrawerToggle clicked = {props.sideDrawerClicked} />
             <Logo  height = '80%'/>
             <nav className={styles.DesktopOnly}>
                 <NavigationItems />
