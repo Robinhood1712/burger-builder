@@ -9,10 +9,15 @@ import Auxilliary from "../../../hoc/auxi";
 
 
 const sideDrawer = (props) => {
+    let attachedStyles = [styles.SideDrawer, styles.Close]
+
+    if (props.open){
+        attachedStyles = [styles.SideDrawer, styles.Open]
+    }
     return (
         <Auxilliary>
             <Backdrop  show = {props.open} clicked = {props.closed}/>
-            <div className={styles.SideDrawer}>
+            <div className={attachedStyles.join(' ')}>
                 <Logo height='10%'/>
                 <nav>
                     <NavigationItems />

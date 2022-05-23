@@ -11,7 +11,7 @@ const toolbar = () => {
     return (
 
         <header className={styles.Toolbar}>
-            <div>menu</div>
+            <div onClick={props.clicked}>menu</div>
             <Logo  height = '80%'/>
             <nav className={styles.DesktopOnly}>
                 <NavigationItems />
