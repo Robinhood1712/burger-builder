@@ -13,7 +13,9 @@ const toolbar = () => {
         <header className={styles.Toolbar}>
             <div>menu</div>
             <Logo  height = '80%'/>
-            <NavigationItems />
+            <nav className={styles.DesktopOnly}>
+                <NavigationItems />
+            </nav>
         </header>    
           
     )
