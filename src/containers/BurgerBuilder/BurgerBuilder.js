@@ -5,6 +5,8 @@ import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
+import axios from "../../Axios-orders";
+import { EvalSourceMapDevToolPlugin } from "webpack";
 
 const INGREDIENTS_PRICES = {
     salad: 200,
@@ -103,7 +105,23 @@ class BurgerBuilder extends Component{
     }
 
     purchaseContinuedHandler = () => {
-        alert('You Continued');
+
+        const orders = {
+            ingredients: this.state.ingredients,
+            totalPrice: this.state.totalPrice,
+            customerData: {
+                name: 'adewole',
+                address: {
+                    street: 'lagos',
+                    zipCode: '23415',
+                    country: 'nigeria',
+                },
+                email: 'ademolaadewole@gmail.com'
+            },
+            deliveryMethod: 'fastest'
+        }
+        // alert('You Continued');
+        axios.post('/orders.json', orders);
     }
 
 
