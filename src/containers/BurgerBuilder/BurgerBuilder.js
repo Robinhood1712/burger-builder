@@ -6,7 +6,6 @@ import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import axios from "../../Axios-orders";
-import { EvalSourceMapDevToolPlugin } from "webpack";
 
 const INGREDIENTS_PRICES = {
     salad: 200,
